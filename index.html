@@ -293,7 +293,7 @@
           </div>
         </section>
       </div>
-      <button class="main_safe-button" type="button" onclick="window['floppy-dialog'].showModal();" aria-controls="floppy-dialog">
+      <button class="main_safe-button" type="button" onclick="window['floppy-dialog'].showModal()">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy"/>
         </svg>
@@ -313,7 +313,7 @@
         </p>
       </div>
       <form method="dialog">
-        <button type="submit" class="floppy-dialog_ok-button" onsubmit="event.preventDefault()">
+        <button type="button" class="floppy-dialog_ok-button" onclick="window['floppy-dialog'].close()">
           <span class="button__text">OK</span>
         </button>
       </form>
