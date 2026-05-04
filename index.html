@@ -298,7 +298,7 @@
           </div>
         </section>
       </div>
-      <button type="button" class="main_safe-button" aria-controls="floppy-dialog">
+      <!-- <button type="button" class="main_safe-button" aria-controls="floppy-dialog">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy"/>
         </svg>
@@ -318,19 +318,8 @@
         <button type="button" class="floppy-dialog_ok-button">
           <span class="button__text">OK</span>
         </button>
-      </dialog>
+      </dialog> -->
 
     <script src="./scripts/like.js"></script>
-    <script>
-      document.querySelector('.main_safe-button').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('floppy-dialog').showModal();
-      });
-
-      document.querySelector('.floppy-dialog_ok-button').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('floppy-dialog').close();
-      });
-    </script>
   </body>
 </html>
