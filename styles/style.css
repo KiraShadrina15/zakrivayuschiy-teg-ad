@@ -1,6 +1,5 @@
 .page {
   min-inline-size: 320px;
-  min-block-size: 100dvb;
   font-family: var(--basic-font-family);
   font-variation-settings: 'wght' var(--basic-normal-font-weight);
   background: var(--pattern-to-right), var(--pattern-to-bottom), var(--gradient-to-bottom);
@@ -355,7 +354,7 @@
   padding: 42px 42px 30px;
 }
 
-.floppy-dialog::backdrop {
+.floppy-dialog[open]::backdrop {
   background-color: rgb(0 0 0 / 0.8);
 } 
 
