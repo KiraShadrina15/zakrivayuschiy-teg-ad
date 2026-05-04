@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--main-color);
-  z-index: -1;
 }
 
 .header {
