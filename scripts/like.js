@@ -1,3 +1,11 @@
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+});
+
 const likeHeartArray = document.querySelectorAll('.like-icon');
 const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');

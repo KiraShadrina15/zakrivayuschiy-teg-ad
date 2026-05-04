@@ -201,6 +201,11 @@
   border-color: var(--main-color);
 }
 
+.card__icon-button svg {
+  pointer-events: none; 
+  display: block;
+}
+
 .sparks {
   opacity: 0;
 }
