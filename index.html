@@ -293,7 +293,7 @@
           </div>
         </section>
       </div>
-      <button type="button" class="main_safe-button" onclick="window['floppy-dialog'].showModal()" aria-controls="floppy-dialog">
+      <button type="button" class="main_safe-button" onclick="window['floppy-dialog'].showModal();" aria-controls="floppy-dialog">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy"/>
         </svg>
@@ -312,9 +312,11 @@
           Вставьте <br> дискету, чтобы <br> продолжить
         </p>
       </div>
-      <button type="button" class="floppy-dialog_ok-button" onclick="window['floppy-dialog'].close()">
-        <span class="button__text">OK</span>
-      </button>
+      <form method="dialog">
+        <button type="submit" class="floppy-dialog_ok-button">
+          <span class="button__text">OK</span>
+        </button>
+      </form>
     </dialog>
 
     <script src="./scripts/like.js"></script>
