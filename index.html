@@ -300,27 +300,27 @@
       </div>
       <button type="button" class="main_safe-button" onclick="document.getElementById('floppy-dialog').showModal();" aria-controls="floppy-dialog">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
-          <use href="svg/floppy.svg#floppy"/>
+            <use href="svg/floppy.svg#floppy"/>
         </svg>
         <span class="button__text">
-          Сохранить на память
+            Сохранить на память
         </span>
       </button>
     </main>
 
-    <dialog id="floppy-dialog" class="floppy-dialog">
-      <div class="floppy-dialog_content">
-        <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39">
-          <use href="svg/floppy.svg#floppy"/>
-        </svg>
-        <p class="floppy-dialog_text">
-          Вставьте <br> дискету, чтобы <br> продолжить
-        </p>
-      </div>
-      <button type="button" class="floppy-dialog_ok-button" onclick="document.getElementById('floppy-dialog').close();">
-        <span class="button__text">OK</span>
-      </button>
-    </dialog>
+      <dialog id="floppy-dialog" class="floppy-dialog">
+          <div class="floppy-dialog_content">
+              <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39">
+                  <use href="svg/floppy.svg#floppy"/>
+              </svg>
+              <p class="floppy-dialog_text">
+                  Вставьте <br> дискету, чтобы <br> продолжить
+              </p>
+          </div>
+          <button type="button" class="floppy-dialog_ok-button" onclick="document.getElementById('floppy-dialog').close();">
+              <span class="button__text">OK</span>
+          </button>
+      </dialog>
 
     <script src="./scripts/like.js"></script>
   </body>
