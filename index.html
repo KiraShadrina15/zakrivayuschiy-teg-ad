@@ -298,7 +298,7 @@
           </div>
         </section>
       </div>
-      <button type="button" class="main_safe-button" onclick="window['floppy-dialog'].showModal();" aria-controls="floppy-dialog">
+      <button type="button" class="main_safe-button" onclick="event.preventDefault(); document.getElementById('floppy-dialog').showModal();" aria-controls="floppy-dialog">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy"/>
         </svg>
@@ -317,11 +317,9 @@
           Вставьте <br> дискету, чтобы <br> продолжить
         </p>
       </div>
-      <form method="dialog" onsubmit="event.preventDefault(); this.closest('dialog').close();">
-        <button type="submit" class="floppy-dialog_ok-button">
+      <button class="floppy-dialog_ok-button" onclick="document.getElementById('floppy-dialog').close();">
           <span class="button__text">OK</span>
-        </button>
-      </form>
+      </button>
     </dialog>
 
     <script src="./scripts/like.js"></script>
