@@ -526,35 +526,31 @@
       <button
         class="main_safe-button"
         type="button"
-        onclick="document.getElementById('floppy-dialog').showModal()"
-        aria-controls="floppy-dialog"
+        onclick="window['floppy-dialog'].showModal(); event.preventDefault();"
       >
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy" />
         </svg>
-        <span class="button__text"> Сохранить на память </span>
+        <span class="button__text">Сохранить на память</span>
       </button>
     </main>
 
     <dialog id="floppy-dialog" class="floppy-dialog">
-      <div class="floppy-dialog_content">
-        <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39">
-          <use href="svg/floppy.svg#floppy" />
-        </svg>
-        <p class="floppy-dialog_text">
-          Вставьте <br />
-          дискету, чтобы <br />
-          продолжить
-        </p>
-      </div>
-      <button
-        class="floppy-dialog_ok-button"
-        type="button"
-        onclick="document.getElementById('floppy-dialog').close()"
-        aria-controls="floppy-dialog"
-      >
-        <span class="button__text"> OK </span>
-      </button>
+      <form method="dialog" class="floppy-dialog_form">
+        <div class="floppy-dialog_content">
+          <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <p class="floppy-dialog_text">
+            Вставьте <br /> 
+            дискету, чтобы <br /> 
+            продолжить
+          </p>
+        </div>
+        <button class="floppy-dialog_ok-button" type="submit">
+          <span class="button__text">OK</span>
+        </button>
+      </form>
     </dialog>
 
     <script src="./scripts/like.js"></script>
