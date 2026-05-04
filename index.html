@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="images/icon-mobile.png" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/icon-mobile.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -30,7 +30,7 @@
             <img
               class="main_block-img main_block-first-img"
               alt="HTML — подготовка к работе"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -90,7 +90,7 @@
             <img
               class="main_block-img main_block-second-img"
               alt="HTML — 1 спринт"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -152,7 +152,7 @@
             <img
               class="main_block-img main_block-third-img"
               alt="CSS — 1 спринт"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -163,7 +163,7 @@
             </p>
             <p class="main_block-information-text">
               Сверстать первый проект за двав дня? Это как раз об этом. Правок
-              почти нет, а счастья выше крыши)
+              почти нет, а счастья выше крыши 🌈
             </p>
           </div>
           <div class="main_block-like">
@@ -214,7 +214,7 @@
             <img
               class="main_block-img main_block-fourth-img"
               alt="Desigions — 2 спринт"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -276,7 +276,7 @@
             <img
               class="main_block-img main_block-fifth-img"
               alt="Care — 2 спринт"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -341,7 +341,7 @@
             <img
               class="main_block-img main_block-sixs-img"
               alt="Support — 3 спринт"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -403,7 +403,7 @@
             <img
               class="main_block-img main_block-sevens-img"
               alt="Lyfes-style — 3 спринт"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -467,7 +467,7 @@
             <img
               class="main_block-img main_block-eights-img"
               alt="Experience — сейчас я тут"
-              src="images/image.png"
+              src="./images/image.png"
             />
           </div>
           <div class="main_block-information">
@@ -526,33 +526,35 @@
       <button
         class="main_safe-button"
         type="button"
-        onclick="window['floppy-dialog'].showModal(); event.preventDefault();"
+        onclick="window['floppy-dialog'].showModal()"
+        aria-controls="floppy-dialog"
       >
-        <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39">
-          <use href="svg/floppy.svg#floppy" />
+        <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+          <use href="./svg/floppy.svg#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-    </main>
 
     <dialog id="floppy-dialog" class="floppy-dialog">
-      <form method="dialog" class="floppy-dialog_form">
-        <div class="floppy-dialog_content">
-          <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39">
-            <use href="svg/floppy.svg#floppy" />
-          </svg>
-          <p class="floppy-dialog_text">
-            Вставьте <br /> 
-            дискету, чтобы <br /> 
-            продолжить
-          </p>
-        </div>
-        <button class="floppy-dialog_ok-button" type="submit">
-          <span class="button__text">OK</span>
-        </button>
-      </form>
+      <div class="floppy-dialog_content">
+        <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <p class="floppy-dialog_text">
+          Вставьте <br /> 
+          дискету, чтобы <br /> 
+          продолжить
+        </p>
+      </div>
+      <button 
+        class="floppy-dialog_ok-button" 
+        type="button"
+        onclick="window['floppy-dialog'].close()"
+        >
+        <span class="button__text">OK</span>
+      </button>
     </dialog>
-
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

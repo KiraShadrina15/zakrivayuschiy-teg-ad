@@ -2,8 +2,11 @@
     0% {
         transform: scale(1);
     }
-    100% {
+    50% {
         transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -11,39 +14,10 @@
     0% {
         opacity: 0;
     }
-    100% {
+    50% {
         opacity: 1;
     }
-}
-
-.like-icon.is-liked .heart {
-    animation: scale 0.1s 0.3s ease-in;
-}
-
-.like-icon.is-liked .core {
-    fill: var(--animation-fill-color);
-    transition: fill 0.3s ease;
-}
-
-.like-icon.is-liked .main-body {
-    fill: var(--animation-fill-color);
-    transition: fill 0.05s 0.3s ease;
-}
-
-.like-icon.is-liked .contour {
-    fill: var(--animation-fill-color);
-    transition: fill 0.06s 0.3s ease;
-}
-
-.like-icon.is-liked .sparks {
-    animation: sparks 0.3s 0.3s ease-in;
-}
-
-.like-icon .core, 
-.like-icon .main-body {
-    fill: none;
-}
-
-.like-icon .contour {
-    fill: var(--contour-color);
+    100% {
+        opacity: 0;
+    }
 }

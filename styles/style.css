@@ -239,6 +239,29 @@
   transition: fill 0.05s 0.3s ease;
 }
 
+.like-icon.is-liked .heart {
+    animation: scale 0.1s 0.3s ease-in;
+}
+
+.like-icon.is-liked .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.05s 0.3s ease;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--animation-fill-color);
+    transition: fill 0.06s 0.3s ease;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks 0.3s 0.3s ease-in;
+}
+
 .card__like-button {
   background-color: transparent;
   border: 2px solid var(--main-color);
@@ -354,7 +377,7 @@
   padding: 42px 42px 30px;
 }
 
-.floppy-dialog[open]::backdrop {
+.floppy-dialog::backdrop {
   background-color: rgb(0 0 0 / 0.8);
 } 
 
