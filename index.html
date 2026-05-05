@@ -545,7 +545,7 @@
       <button 
         class="main_safe-button" 
         type="button"
-        onclick="event.preventDefault(); document.getElementById('floppy-dialog').showModal()">
+        onclick="event ? event.preventDefault() : null; document.getElementById('floppy-dialog').showModal()">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
