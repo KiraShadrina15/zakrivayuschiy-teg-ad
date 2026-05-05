@@ -1,16 +1,3 @@
-window.addEventListener('beforeunload', e => {
-    e.preventDefault();
-    e.returnValue = '';
-});
-
-document.addEventListener('submit', e => e.preventDefault());
-
-document.addEventListener('click', e => {
-    if (e.target.closest('a')) {
-        e.preventDefault();
-    }
-});
-
 const likeHeartArray = document.querySelectorAll('.like-icon');
 const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');

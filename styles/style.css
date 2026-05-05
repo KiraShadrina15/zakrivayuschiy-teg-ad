@@ -3,7 +3,6 @@
   font-family: var(--basic-font-family);
   font-variation-settings: 'wght' var(--basic-normal-font-weight);
   background: var(--pattern-to-right), var(--pattern-to-bottom), var(--gradient-to-bottom);
-  object-fit: cover;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -61,7 +60,7 @@
 
 .main_block-title {
   font-size: 18px;
-  text-wrap: wrap;
+  white-space: normal;
   font-variation-settings: 'wght' var(--basic-bold-font-weight);
   margin: 4px 10px 6px;
 }
@@ -74,7 +73,7 @@
 }
 
 .main_block-img-container::after {
-  content: " ";
+  content: "";
   font-size: 14px;
   color: var(--main-color);
   font-family: var(--accent-font-family);
@@ -131,37 +130,44 @@
 }
 
 .main_block-img {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
   background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
 }
 
 .main_block-second-img {
+  -webkit-filter: grayscale(75%);
   filter: grayscale(75%);
 }
 
 .main_block-third-img {
+  -webkit-filter: saturate(360%);
   filter: saturate(360%);
 }
 
 .main_block-fourth-img {
+  -webkit-filter: hue-rotate(30deg);
   filter: hue-rotate(30deg);
 }
 
 .main_block-fifth-img {
+  -webkit-filter: invert(75%);
   filter: invert(75%);
 }
 
 .main_block-sixs-img {
+  -webkit-filter: sepia(90%);
   filter: sepia(90%);
 }
 
 .main_block-sevens-img {
+  -webkit-filter: blur(7px);
   filter: blur(7px);
 }
 
 .main_block-eights-img {
+  -webkit-filter: brightness(150%) hue-rotate(270deg) blur(1px);
   filter: brightness(150%) hue-rotate(270deg) blur(1px);
 }
 
@@ -189,6 +195,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease;
 }
 
@@ -211,55 +218,66 @@
 
 .core {
   fill: transparent;
+  -webkit-transition: fill 0.03s 0.3s ease;
   transition: fill 0.03s 0.3s ease;
 }
 
 .main-body {
   fill: transparent;
+  -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
 }
 
 .card__icon-button:hover .core {
   fill: var(--contour-color);
+  -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--contour-color);
+  -webkit-transition: fill 0.05s 0.3s ease;
   transition: fill 0.05s 0.3s ease;
 }
 
 .card__icon-button:active .core {
   fill: var(--animation-fill-color);
+  -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
 }
 
 .card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
+  -webkit-transition: fill 0.05s 0.3s ease;
   transition: fill 0.05s 0.3s ease;
 }
 
 .like-icon.is-liked .heart {
-    animation: scale 0.1s 0.3s ease-in;
+  -webkit-animation: scale 0.1s 0.3s ease-in;
+  animation: scale 0.1s 0.3s ease-in;
 }
 
 .like-icon.is-liked .core {
-    fill: var(--animation-fill-color);
-    transition: fill 0.3s ease;
+  fill: var(--animation-fill-color);
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .main-body {
-    fill: var(--animation-fill-color);
-    transition: fill 0.05s 0.3s ease;
+  fill: var(--animation-fill-color);
+  -webkit-transition: fill 0.05s 0.3s ease;
+  transition: fill 0.05s 0.3s ease;
 }
 
 .like-icon.is-liked .contour {
-    fill: var(--animation-fill-color);
-    transition: fill 0.06s 0.3s ease;
+  fill: var(--animation-fill-color);
+  -webkit-transition: fill 0.06s 0.3s ease;
+  transition: fill 0.06s 0.3s ease;
 }
 
 .like-icon.is-liked .sparks {
-    animation: sparks 0.3s 0.3s ease-in;
+  -webkit-animation: sparks 0.3s 0.3s ease-in;
+  animation: sparks 0.3s 0.3s ease-in;
 }
 
 .card__like-button {
@@ -283,12 +301,15 @@
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   z-index: 0;
 }
 
 .card__like-button:hover::before {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -299,6 +320,7 @@
 .card__like-button:focus-visible {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
+  -webkit-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
 }
 
@@ -333,12 +355,15 @@
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   z-index: 0;
 }
 
 .main_safe-button:hover::before {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -349,6 +374,7 @@
 .main_safe-button:focus-visible {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
+  -webkit-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
 }
 
@@ -379,7 +405,7 @@
 
 .floppy-dialog::backdrop {
   background-color: rgb(0 0 0 / 0.8);
-} 
+}
 
 .floppy-dialog[open] .floppy-dialog_content {
   display: flex;
@@ -410,12 +436,15 @@
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   z-index: 0;
 }
 
 .floppy-dialog[open] .floppy-dialog_ok-button:hover::before {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -426,13 +455,14 @@
 .floppy-dialog[open] .floppy-dialog_ok-button:focus-visible {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
+  -webkit-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
 }
 
 .floppy-dialog[open] .floppy-dialog_text {
   font-size: 14px;
   font-family: var(--accent-font-family);
-  text-wrap: wrap;
+  white-space: normal;
   text-transform: uppercase;
   line-height: 150%;
 }
