@@ -162,7 +162,7 @@
               наоборот, могли вдохновиться успехами и поверить в себя.
             </p>
             <p class="main_block-information-text">
-              Сверстать первый проект за двав дня? Это как раз об этом. Правок
+              Сверстать первый проект за два дня? Это как раз об этом. Правок
               почти нет, а счастья выше крыши 🌈
             </p>
           </div>
@@ -544,9 +544,8 @@
 
       <button 
         class="main_safe-button" 
-        type="button" 
-        onclick="document.getElementById('floppy-dialog').showModal()" 
-        aria-controls="floppy-dialog">
+        type="button"
+        onclick="event.preventDefault(); document.getElementById('floppy-dialog').showModal()">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
