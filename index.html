@@ -524,7 +524,7 @@
         </section>
       </div>
 
-      <dialog id="floppy-dialog" class="floppy-dialog">
+      <dialog id="dialog" class="dialog">
         <div class="floppy-dialog_content">
           <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
             <use href="./svg/floppy.svg#floppy" />
@@ -545,7 +545,7 @@
       <button 
         class="main_safe-button" 
         type="button"
-        onclick="event ? event.preventDefault() : null; document.getElementById('floppy-dialog').showModal()">
+        onclick="document.getElementById('dialog').showModal()">
         <svg class="main_safe-button-svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
