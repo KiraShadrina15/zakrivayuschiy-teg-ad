@@ -97,7 +97,7 @@
 
 @supports not (-webkit-text-stroke: 1px var(--blocks-color)) {
   .main_block-img-container::after {
-    text-shadow: 1px var(--blocks-color);
+    text-shadow: 1px 0 0 var(--blocks-color);
   }
 }
 
@@ -407,11 +407,11 @@
   align-items: center;
 }
 
-.floppy-dialog::backdrop {
+.dialog::backdrop {
   background-color: rgb(0 0 0 / 0.8);
 }
 
-.floppy-dialog_content {
+.dialog_content {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -419,12 +419,12 @@
   grid-row: 1;
 }
 
-.floppy-dialog_svg-floppy {
+.dialog_svg-floppy {
   width: 39px;
   height: 39px;
 }
 
-.floppy-dialog_ok-button {
+.dialog_ok-button {
   background-color: transparent;
   border: 2px solid var(--main-color);
   padding: 12.5px 114.5px;
@@ -434,7 +434,7 @@
   grid-row: 2;
 }
 
-.floppy-dialog_ok-button::before {
+.dialog_ok-button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -449,23 +449,23 @@
   z-index: 0;
 }
 
-.floppy-dialog_ok-button:hover::before {
+.dialog_ok-button:hover::before {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
-.floppy-dialog_ok-button:focus {
+.dialog_ok-button:focus {
   outline: none;
 }
 
-.floppy-dialog_ok-button:focus-visible {
+.dialog_ok-button:focus-visible {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
   -webkit-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
 }
 
-.floppy-dialog_text {
+.dialog_text {
   font-size: 14px;
   font-family: var(--accent-font-family);
   white-space: normal;
@@ -474,11 +474,11 @@
 }
 
 @media (width > 1000px) {
-  .floppy-dialog[open] {
+  .dialog[open] {
     padding: 30px;
   }
 
-  .floppy-dialog[open] .floppy-dialog_ok-button {
+  .dialog_ok-button {
     padding: 12.5px 132.5px;
   }
 }
