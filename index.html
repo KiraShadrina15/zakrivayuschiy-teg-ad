@@ -525,24 +525,20 @@
       </div>
 
       <dialog id="floppy-dialog" class="floppy-dialog">
-      <div class="floppy-dialog_content">
-        <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
-          <use href="./svg/floppy.svg#floppy" />
-        </svg>
-        <p class="floppy-dialog_text">
-          Вставьте <br /> 
-          дискету, чтобы <br /> 
-          продолжить
-        </p>
-      </div>
-      <button 
-        type="button" 
-        class="floppy-dialog_ok-button"
-        onclick="document.getElementById('floppy-dialog').close()"
-      >
-        <span class="button__text">OK</span>
-      </button>
-    </dialog>
+        <div class="floppy-dialog_content">
+          <svg class="floppy-dialog_svg-floppy" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+            <use href="./svg/floppy.svg#floppy" />
+          </svg>
+          <p class="floppy-dialog_text">
+            Вставьте дискету, чтобы продолжить
+          </p>
+        </div>
+        <form method="dialog">
+          <button type="submit" class="floppy-dialog_ok-button" onclick="document.getElementById('floppy-dialog').close(); return false;">
+            <span class="button__text">OK</span>
+          </button>
+        </form>
+      </dialog>
 
       <button 
         class="main_safe-button" 
